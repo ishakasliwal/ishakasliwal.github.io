@@ -8,16 +8,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
       /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+      
       body {
-        padding: 30px;
+        padding: 50px 80px;
+      }
+
+      .container {
+        width: 70%;
+      }
+
+      .section {
+        margin: 60px 0;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      h3 {
+        font-size: 22px;
       }
       
-      p {
+      p, li {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .slide {
+        height: auto;
+        width: 48%;
+        margin: 10px 0;
+        padding: 0 5px;
+      }
+
+      .caption {
         font-size: 14px;
+        font-style: italic;
+        color: #676767;
+      }
+
+      .prayer-hands {
+        width: 5%;
+      }
+
+      .twitter-tweet-rendered {
+        width: 49% !important;
+        display: inline-block !important;
+      }
+
+      @media (max-width: 767px) {
+        body {
+          padding: 10px 30px;
+        }
+
+        .container {
+          width: 90%;
+        }
+
+        .twitter-tweet-rendered {
+          width: 100% !important;
+        }
+
+        .prayer-hands {
+          width: 10%;
+        }
       }
     </style>
   </head>
   <body>
-    <p>Here's another page</p>
+    <div class="container">
+      <div class="section">
+        <h1>What Happens Next?
+        <br>Everything That Comes After Setting Up Your Design System</h1>
+      </div>
+
+      <div class="section">
+        <h2>Abstract</h2>
+        <p>So you’ve gotten buy-in, you’ve made an inventory of designs and components, and you’ve set up your team’s first design system. What happens next? This talk will explore maintaining a design system, as well as new challenges that arise once your design system matures. Topics that this talk will cover will include: documentation, adoption, support, tooling, and architecture.</p>
+      </div>
+
+      <div class="section">
+        <h2>Presentation</h2>
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/1maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/2maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/3maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/4maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/5maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/6maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/7maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/8maturing-design-systems-talk.png" />
+        <img class="slide" src="/talks/slides-images/maturing-design-systems-slides/9maturing-design-systems-talk.png" />
+      </div>
+
+      <div class="section">
+        <h2>Overview</h2>
+        <p>
+          Design systems have grown significantly in popularity. Design systems the new "must-have" for any company that intends to scale. According to <a href="https://www.uxpin.com/create-design-system-guide">UXPin</a>, "A design system is a set of standards for design and code along with components that unify both practices. Think of it as the same instructions and Lego kit for everyone."
+        </p>
+        <p>
+          There are plenty of talks, blog posts, workshops, etc. that cover what a design system is and how you build one, but not enough about what you do after the fact. We all have a lot of knowledge about how to make the product, but not enough knowledge about how to maintain the product, and what pitfalls might occur two to five years down the line. On top of that, because design systems are very new, there are only a few that are truly mature by nature. 
+        </p>
+        <p>
+          My talk, "What Happens Next? Everything That Comes After Setting Up Your Design System," covers what you can expect to deal with as your design system matures. Over the past 3 years of building, launching, and keeping up with the <a href="https://lightningdesignsystem.com/">Lightning Design System</a>, the team learned to focus on certain key areas in order to sustain the design system as it sophisticated. During this talk, I go into detail about those areas that the Lightning team decided were important to scale. The areas I reference include: maintaining components, adoption, support, documentation, tooling, and strategy/architecture. Additionally, I share case studies from Lightning to illustrate how exactly the team chose to tackle scaling those areas.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Clarity Conf 2017</h2>
+        <p>
+          I did a version of this talk at <a href="https://www.clarityconf.com/">Clarity Conf 2017</a>, a conference focused on design systems, organized by <a href="https://twitter.com/jina">Jina Anne</a>.
+        </p>
+        <img src="/talks/images/claritytalk1.JPG" />
+      </div>
+
+      <div class="section">
+        <h2>Open Question: Design Systems Communication?</h2>
+        <p>At Clarity Conf 2017, I asked the audience an open question: "What is a good way to communicate changes that happen to your design system to all of your users? These changes can range from component additions, to component updates, to design modifications." As this is something that the Lightning Design Systems team has found challenging, I wanted to know what strategies others might be using and finding success in when it comes to communicating change to their broader range of design systems consumers. The audience responded via a Twitter thread I started, and here are the responses:</p>
+
+        <blockquote class="twitter-tweet tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">off the top of my head — descriptive changelog w/ dev/design notes, denote breaking changes, new components, modifiers. auto publish changelog to email lists, a feed to slack/etc. also on style guide site.</p>&mdash; elyse @ #clarity2017 (@elyseholladay) <a href="https://twitter.com/elyseholladay/status/935999935878533121?ref_src=twsrc%5Etfw">November 29, 2017</a></blockquote>
+
+        <blockquote class="twitter-tweet tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">We use Facebook at Facebook to communicate (surprise!), so we have groups to share and discuss system changes. We also rely a lot on system advocates within product teams to organically share those changes with their team. <a href="https://twitter.com/hashtag/clarity2017?src=hash&amp;ref_src=twsrc%5Etfw">#clarity2017</a></p>&mdash; Daniel Eden (@_dte) <a href="https://twitter.com/_dte/status/936000536427429888?ref_src=twsrc%5Etfw">November 29, 2017</a></blockquote>
+
+        <blockquote class="twitter-tweet tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Every sprint ending with a release has a JIRA subtasks for:<br>1. Compose Release History &amp; Announcement (and get it edited)<br>2. Publish Homepage &amp; Release History Updates <br>3. Release<br>4. Announce in 2-4 Slack &amp; other channels</p>&mdash; Nathan Curtis (@nathanacurtis) <a href="https://twitter.com/nathanacurtis/status/936001070911733761?ref_src=twsrc%5Etfw">November 29, 2017</a></blockquote>
+
+        <blockquote class="twitter-tweet tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">We have several slack channels specifically for our system. Its a way for our users to ask us questions anytime and for us to make announcements (roadmaps, version launches, polls). We also use github to publish release notes and talk with users about questions, bugs, &amp; requests.</p>&mdash; Carbon Design System (@_carbondesign) <a href="https://twitter.com/_carbondesign/status/936010853018632196?ref_src=twsrc%5Etfw">November 29, 2017</a></blockquote>
+
+        <blockquote class="twitter-tweet tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">We send out newsletters. Easy to reach different types of users (design, eng and pms).</p>&mdash; Tina 🇨🇭🇯🇵 (@tinastsh) <a href="https://twitter.com/tinastsh/status/936002244851331072?ref_src=twsrc%5Etfw">November 29, 2017</a></blockquote>
+
+        <blockquote class="twitter-tweet tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Automate sending changelog as newsletter with every major release. Communicate all breaking changes on Slack. Always on Design systems page History section. Always include info for support.</p>&mdash; Niko Laitinen (@laitineIO) <a href="https://twitter.com/laitineIO/status/936003459177857024?ref_src=twsrc%5Etfw">November 29, 2017</a></blockquote>
+
+
+        <p>If you're interested in sharing what your team does, feel free to respond to the original thread, and I'll add it here as well.</p>
+        <p>Thanks to all of the smart people who were willing to share their insight!</p>
+      </div>
+
+      <div class="section">
+        <h2>Credits</h2>
+        <ul>
+          <li>Thank you to my good friend <a href="https://twitter.com/morgan_e_">Morgane</a> for designing my slides</li>
+          <li>Thank you to <a href="https://twitter.com/jina">Jina</a> for giving me the opportunity to speak at Clarity Conf</li>
+          <li>Thank you to <a href="https://twitter.com/stefsull">Stef</a> for reviewing my slides and giving me pro speaking tips</li>
+          <li>Thank you to the <a href="https://lightningdesignsystem.com/">Lightning Design Systems</a> team for giving me the experience and content for this talk</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>P.S.</h2>
+        <p>
+          If you're interested in chatting with me about this talk, or design systems in general, <a href="https://twitter.com/ikasliwal">please DM me on Twitter</a> and we can take the conversation from there. Apologies if I'm unresponsive via Slack!
+        </p>
+        <img class="prayer-hands" src="http://d2trtkcohkrm90.cloudfront.net/images/emoji/apple/ios-10/256/folded-hands.png" />
+      </div>
+
+    </div>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
 </html>
